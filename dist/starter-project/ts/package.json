@@ -1,0 +1,40 @@
+{
+  "name": "immunx-agent-starter",
+  "version": "0.0.1",
+  "description": "Immunx Agent Typescript starter project",
+  "repository": "",
+  "chainIds": [
+    1
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run start:dev",
+    "start:dev": "nodemon --watch src --watch immunx.config.json -e js,ts,json  --exec \"npm run build && immunx-agent run\"",
+    "start:prod": "immunx-agent run --prod",
+    "tx": "npm run build && immunx-agent run --tx",
+    "block": "npm run build && immunx-agent run --block",
+    "range": "npm run build && immunx-agent run --range",
+    "alert": "npm run build && immunx-agent run --alert",
+    "sequence": "npm run build && immunx-agent run --sequence",
+    "file": "npm run build && immunx-agent run --file",
+    "publish": "immunx-agent publish",
+    "info": "immunx-agent info",
+    "logs": "immunx-agent logs",
+    "push": "immunx-agent push",
+    "disable": "immunx-agent disable",
+    "enable": "immunx-agent enable",
+    "keyfile": "immunx-agent keyfile",
+    "test": "jest"
+  },
+  "dependencies": {
+    "immunx-agent": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/nodemon": "^1.19.0",
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.8",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.4"
+  }
+}

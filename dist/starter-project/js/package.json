@@ -1,0 +1,35 @@
+{
+  "name": "immunx-agent-starter",
+  "version": "0.0.1",
+  "description": "Immunx Agent Javascript starter project",
+  "repository": "",
+  "chainIds": [
+    1
+  ],
+  "scripts": {
+    "start": "npm run start:dev",
+    "start:dev": "nodemon --watch src --watch immunx.config.json -e js,json --exec \"immunx-agent run\"",
+    "start:prod": "immunx-agent run --prod",
+    "tx": "immunx-agent run --tx",
+    "block": "immunx-agent run --block",
+    "range": "immunx-agent run --range",
+    "alert": "immunx-agent run --alert",
+    "sequence": "immunx-agent run --sequence",
+    "file": "immunx-agent run --file",
+    "publish": "immunx-agent publish",
+    "info": "immunx-agent info",
+    "logs": "immunx-agent logs",
+    "push": "immunx-agent push",
+    "disable": "immunx-agent disable",
+    "enable": "immunx-agent enable",
+    "keyfile": "immunx-agent keyfile",
+    "test": "jest"
+  },
+  "dependencies": {
+    "immunx-agent": "^0.0.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.8"
+  }
+}

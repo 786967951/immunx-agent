@@ -1,0 +1,2 @@
+immunx_agent>=0.1.13
+setuptools>=61.3.1
