@@ -1,6 +1,6 @@
 {
   "name": "immunx-agent",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "license": "MIT",
   "description": "Immunx Agent SDK and CLI tool",
   "homepage": "",
