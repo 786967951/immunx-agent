@@ -1,5 +1,5 @@
 # Build stage: compile Python dependencies
-FROM python:3.9-alpine as builder
+FROM python:3.10-alpine as builder
 RUN apk update
 RUN apk add alpine-sdk
 RUN python3 -m pip install --upgrade pip
@@ -18,5 +18,8 @@ ENV NODE_ENV=production
 WORKDIR /app
 COPY ./src ./src
 COPY package*.json ./
+COPY requirements*.txt ./
+RUN python3 -m ensurepip --default-pip
+RUN pip install --upgrade pip
 RUN npm ci --production
 CMD [ "npm", "run", "start:prod" ]
