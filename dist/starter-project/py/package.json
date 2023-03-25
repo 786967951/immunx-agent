@@ -27,7 +27,7 @@
     "test": "python3 -m pytest"
   },
   "dependencies": {
-    "immunx-agent": "^0.0.1"
+    "immunx-agent": "^0.0.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.8"
